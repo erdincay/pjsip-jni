@@ -18,7 +18,10 @@ with a few exceptions. One problem so far is that passing void* pointer up to Ja
 a bit difficult with swig. Therefore a few callback functions do not expose all the
 available data. The exposed API is sufficient to build a working phone, though.
 
-This package contains prebuilt binaries. If you want to compile the wrapper yourself,
-you need a Linux installation and you have to install the pjsip library on it.
-Please see the Makefile for detailed instructions for building the Windows and Linux
-wrappers.
+This package contains prebuilt binaries for the wrapper. You simply have to import the
+directory as a project into eclipse and can use it as either a plugin based project or
+a Java project.
+
+If you want to compile the wrapper yourself, you need a Linux installation and you have
+to install the pjsip library on it. Please see the Makefile for detailed instructions
+about how to build the Windows and Linux wrappers.

@@ -11,7 +11,8 @@
 # sudo rm /usr/local/lib/pkgconfig/libpj.pc
 # for file in `find . -name '*.a'`; do filename=`basename $file`; linkedfile=`echo $filename | sed -e "s/-i686-pc-linux-gnu//"`; sudo rm /usr/local/lib/$filename /usr/local/lib/$linkedfile; done
 # basedir=`pwd`; for dir in `find . -name include`; do echo "---$dir---"; cd $dir; for file in `find .`; do deletefile=`echo $file | sed 's/^\.\/\?//'`; sudo rm /usr/local/include/$deletefile; done; cd $basedir; done
-#
+# 
+# For the windows build you should extract the pjsip library separately.
 # Compiling for win32 is a matter of installing mingw, invoking:
 # $ ./configure --host=i586-mingw32msvc
 # (adapt the host string to the prefix of the mingw-gcc executable)
