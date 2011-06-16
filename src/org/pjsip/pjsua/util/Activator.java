@@ -2,7 +2,6 @@ package org.pjsip.pjsua.util;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
-import org.pjsip.pjsua.pjsua;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -27,7 +26,11 @@ public class Activator extends Plugin {
 	 */
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
-		System.loadLibrary("pjsua_jni");
+		if(System.getProperty("os.arch").equals("amd64")) {
+			System.loadLibrary("pjsua_jni_x64");
+		}else {
+			System.loadLibrary("pjsua_jni");
+		}
 		plugin = this;
 	}
 
